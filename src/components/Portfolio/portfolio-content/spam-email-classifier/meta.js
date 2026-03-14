@@ -1,0 +1,17 @@
+export default {
+  slug: "spam-email-classifier",
+  title: "Spam Email Classifier",
+  date: "2026-01-04",
+  image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?q=80&w=1200&auto=format&fit=crop",
+  desc: "NLP-based text classifier to detect spam emails.",
+  tech: ["Python", "Scikit-learn", "TF-IDF", "NumPy"],
+  results: "F1 Score: 0.93",
+  links: { github: "https://github.com/DEEPY-X7" },
+  problemStatement: "Classify incoming email text as spam or ham.",
+  dataset: "Labeled SMS/email text dataset with binary spam labels.",
+  eda: "Inspected text length distributions and class frequencies.",
+  featureEngineering: "Tokenization, stop-word removal, and TF-IDF vectorization.",
+  modelUsed: "Multinomial Naive Bayes and Linear SVM comparison.",
+  evaluationMetrics: "Precision, recall, F1-score, ROC-AUC.",
+  resultsDetail: "Linear SVM achieved strong spam recall with 0.93 F1 score.",
+};

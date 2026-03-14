@@ -1,72 +1,57 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+import { ArrowRight, Github, Mail, LineChart } from "lucide-react";
 
-const HeroSection = () => {
-  const [typedText, setTypedText] = useState("");
-  const fullText =
-    "MERN Stack Developer | Soulful Coder | Digital Dream Weaver";
-  const speed = 60;
+const stats = [
+  { label: "ML Projects", value: "5+" },
+  { label: "GitHub Repos", value: "20+" },
+  { label: "Learning Focus", value: "Python + ML" },
+];
 
-  useEffect(() => {
-    let i = 0;
-    const typeInterval = setInterval(() => {
-      setTypedText((prev) => prev + fullText[i]);
-      i++;
-      if (i === fullText.length) clearInterval(typeInterval);
-    }, speed);
-    return () => clearInterval(typeInterval);
-  }, []);
-
+export default function HeroSection() {
   return (
-    <section className="w-full min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-16 pt-20 md:pt-24 bg-gradient-to-b from-black via-gray-900 to-black text-white">
-      {/* 👤 Profile Image */}
-      <motion.div
-        className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-700 shadow-xl"
-        animate={{ y: [0, -6, 0, 6, 0] }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <img
-          src="https://res.cloudinary.com/dadp7h2k1/image/upload/v1753085575/deepanshu-profile_xd6jzv.jpg"
-          alt="Portrait of Deepanshu Yadav"
-          className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
-        />
-      </motion.div>
-
-      {/* ✍️ Text Section */}
-      <motion.div
-        className="max-w-2xl text-center md:text-left space-y-4 px-2 sm:px-0"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2 }}
-      >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-          Hello, I’m <br />
-          <span className="text-gray-300">Deepanshu Yadav</span>
+    <section id="home" className="section-wrap py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p className="text-sky-300 text-sm mb-3">BCA Student • Machine Learning Learner</p>
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          Building Machine Learning Projects and Exploring Intelligent Systems
         </h1>
-
-        <p className="text-base sm:text-lg md:text-xl text-gray-400">
-          I build web experiences that feel personal.  
-          I don’t just write code — I compose expressions in logic and pixels.
+        <p className="text-slate-300 mt-5 max-w-xl">
+          I’m learning machine learning by shipping small projects, writing down lessons, and iterating on real datasets.
+          My focus is Python, data analysis, and predictive modeling workflows.
         </p>
 
-        <p className="text-sm sm:text-base md:text-lg font-mono text-gray-500 min-h-[2rem]">
-          {typedText}
-          <span className="animate-blink">|</span>
-        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" className="px-5 py-2.5 rounded-lg bg-sky-500 text-slate-950 text-sm font-semibold hover:bg-sky-400 transition">View Projects</a>
+          <a href="https://github.com/DEEPY-X7" target="_blank" rel="noreferrer" className="px-5 py-2.5 rounded-lg border border-sky-300/30 text-sm inline-flex items-center gap-2 hover:border-sky-300">
+            <Github size={16} /> GitHub
+          </a>
+          <a href="#contact" className="px-5 py-2.5 rounded-lg border border-slate-600 text-sm inline-flex items-center gap-2 hover:border-slate-400">
+            <Mail size={16} /> Contact
+          </a>
+        </div>
+      </div>
 
-        <a
-          href="/portfolio"
-          className="inline-block mt-4 px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition duration-300 text-sm sm:text-base"
-        >
-          View My Work
-        </a>
-      </motion.div>
+      <div className="surface-card p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold">Learning Dashboard</h2>
+          <LineChart size={18} className="text-cyan-300" />
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-3">
+          {stats.map((s) => (
+            <div key={s.label} className="bg-slate-900 rounded-xl p-4 border border-slate-700/70">
+              <p className="text-xl font-semibold text-sky-300">{s.value}</p>
+              <p className="text-xs text-slate-400 mt-1">{s.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 rounded-xl bg-slate-900 p-4 border border-slate-700/70">
+          <p className="text-xs text-slate-400 mb-2">Current sprint</p>
+          <p className="text-sm text-slate-200">Improving model evaluation understanding: confusion matrix, precision/recall trade-off, and feature importance.</p>
+          <span className="inline-flex items-center gap-1 text-xs text-cyan-300 mt-3">Weekly progress notes <ArrowRight size={14} /></span>
+        </div>
+      </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

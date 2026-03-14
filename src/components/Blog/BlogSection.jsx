@@ -16,7 +16,7 @@ export default function BlogSection() {
           transition={{ duration: 1 }}
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-14"
         >
-          📝 Latest Writings
+          AI / ML Blog
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:gap-12">

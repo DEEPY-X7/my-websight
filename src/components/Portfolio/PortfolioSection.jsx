@@ -1,34 +1,16 @@
-// src/components/Portfolio/PortfolioSection.jsx
-
 import React from "react";
-import { motion } from "framer-motion";
 import ProjectGrid from "./ProjectGrid";
 
 export default function PortfolioSection() {
   return (
-    <motion.section
-      className="bg-gradient-to-b from-black via-gray-900 to-black py-20 px-4 text-white"
-      animate={{ y: [0, -6, 0, 6, 0] }}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    >
-      <div className="max-w-7xl mx-auto">
-        {/* ✅ Motion Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
-        >
-          My Portfolio
-        </motion.h2>
-
-        {/* ✅ Project Grid */}
+    <section className="py-16 px-4 text-white bg-[#0F172A]">
+      <div className="section-wrap">
+        <h1 className="text-4xl font-bold text-center">Machine Learning Projects</h1>
+        <p className="text-center text-slate-400 max-w-2xl mx-auto mt-3 mb-10">
+          Each project includes the problem statement, dataset context, feature engineering decisions, and evaluation notes.
+        </p>
         <ProjectGrid />
       </div>
-    </motion.section>
+    </section>
   );
 }
