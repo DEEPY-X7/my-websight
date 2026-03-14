@@ -2,8 +2,9 @@ import React from "react";
 import Navbar from "../components/Home/Navbar";
 import HeroSection from "../components/Home/HeroSection";
 import ProjectOverviewSection from "../components/Home/ProjectOverviewSection";
+import MLInsights from "../sections/MLInsights";
 import SkillsSection from "../components/Home/SkillsSection";
-import LearningJourneySection from "../components/Home/LearningJourneySection";
+import LearningJourney from "../sections/LearningJourney";
 import GithubSection from "../components/Home/GithubSection";
 import BlogSectionHome from "../components/Home/BlogSectionHome";
 import AboutSectionHome from "../components/Home/AboutSectionHome";
@@ -12,13 +13,13 @@ import FooterCTA from "../components/Home/FooterCTA";
 
 export default function Home() {
   return (
-    <div className="bg-[#0F172A] text-slate-200 min-h-screen">
-      {/* Major redesign: homepage now follows an ML-portfolio-first information architecture. */}
+    <div className="bg-slate-900 text-slate-200 min-h-screen">
       <Navbar />
       <HeroSection />
       <ProjectOverviewSection />
+      <MLInsights />
       <SkillsSection />
-      <LearningJourneySection />
+      <LearningJourney />
       <GithubSection />
       <BlogSectionHome />
       <AboutSectionHome />
