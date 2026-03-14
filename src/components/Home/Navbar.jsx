@@ -18,7 +18,7 @@ export default function Navbar() {
     `text-sm font-medium transition-colors ${isActive ? "text-sky-300" : "text-slate-300 hover:text-slate-100"}`;
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-sky-300/10 bg-[#0f172a]/90 backdrop-blur">
+    <nav className="sticky top-0 z-50 border-b border-sky-300/10 bg-slate-900/90 backdrop-blur">
       <div className="section-wrap py-4 flex items-center justify-between">
         <NavLink to="/" className="text-lg font-bold tracking-tight">
           Deepanshu<span className="text-sky-400">.ml</span>
@@ -34,7 +34,7 @@ export default function Navbar() {
             href="https://github.com/DEEPY-X7"
             target="_blank"
             rel="noreferrer"
-            className="text-slate-300 hover:text-sky-300 transition-colors"
+            className="w-9 h-9 rounded-lg border border-slate-700 grid place-items-center text-slate-300 hover:text-sky-300 hover:border-sky-400/60 transition"
             aria-label="Open GitHub profile"
           >
             <Github size={18} />
@@ -62,6 +62,14 @@ export default function Navbar() {
               {item.label}
             </NavLink>
           ))}
+          <a
+            href="https://github.com/DEEPY-X7"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-medium text-slate-300 hover:text-sky-300 transition-colors"
+          >
+            GitHub Profile
+          </a>
         </div>
       )}
     </nav>
