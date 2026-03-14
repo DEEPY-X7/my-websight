@@ -2,16 +2,16 @@ import React from "react";
 import { ArrowUpRight, BrainCircuit, Github, Mail } from "lucide-react";
 
 const highlights = [
-  "Predictive modeling practice",
-  "Dataset-first problem solving",
-  "Consistent ML learning logs",
+  "Feature engineering practice",
+  "Model evaluation with clear metrics",
+  "Learning logs from every experiment",
 ];
 
 export default function HeroSection() {
   return (
     <section
       id="home"
-      className="section-wrap py-16 lg:py-24 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center [animation:heroFade_0.8s_ease-out]"
+      className="section-wrap py-24 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center [animation:heroFade_0.8s_ease-out]"
     >
       <div>
         <p className="text-sky-400 text-sm mb-3">BCA Student • Machine Learning Portfolio</p>
@@ -21,11 +21,16 @@ export default function HeroSection() {
         <p className="text-slate-300 mt-5 max-w-xl text-base">
           BCA student learning machine learning, data analysis and predictive modeling using Python.
         </p>
+        <p className="mt-5 text-sm text-slate-300 leading-relaxed">
+          <span className="text-slate-100 font-semibold">3 Machine Learning Projects Built</span>
+          <br />
+          Python • Pandas • Scikit-learn
+        </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="#projects"
-            className="px-5 py-2.5 rounded-xl bg-sky-400 text-slate-950 text-sm font-semibold hover:bg-sky-300 transition"
+            className="px-5 py-3 rounded-xl bg-sky-400 text-slate-950 text-sm font-semibold hover:bg-sky-300 transition"
           >
             View Projects
           </a>
@@ -33,22 +38,22 @@ export default function HeroSection() {
             href="https://github.com/DEEPY-X7"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2.5 rounded-xl border border-slate-600 text-sm inline-flex items-center gap-2 hover:border-sky-400 hover:text-sky-300 transition"
+            className="px-5 py-3 rounded-xl border border-slate-600 text-sm inline-flex items-center gap-2 hover:border-sky-400 hover:text-sky-300 transition"
           >
             <Github size={16} /> GitHub
           </a>
           <a
             href="#contact"
-            className="px-5 py-2.5 rounded-xl border border-slate-600 text-sm inline-flex items-center gap-2 hover:border-sky-400 hover:text-sky-300 transition"
+            className="px-5 py-3 rounded-xl border border-slate-600 text-sm inline-flex items-center gap-2 hover:border-sky-400 hover:text-sky-300 transition"
           >
             <Mail size={16} /> Contact
           </a>
         </div>
       </div>
 
-      <div className="surface-card bg-slate-800 p-6 md:p-7">
+      <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-6 md:p-7">
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-lg font-semibold text-slate-100">ML Focus Snapshot</h2>
+          <h2 className="text-lg font-semibold text-slate-100">Current ML Focus</h2>
           <BrainCircuit size={20} className="text-sky-400" />
         </div>
 

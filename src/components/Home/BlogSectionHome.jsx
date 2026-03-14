@@ -18,7 +18,7 @@ function BlogCard({ title }) {
 
 export default function BlogSectionHome() {
   return (
-    <section className="section-wrap py-16">
+    <section className="section-wrap py-24">
       <h2 className="text-3xl font-semibold">Blog</h2>
       <p className="text-slate-400 mt-2">I document concepts in simple language as I learn.</p>
       <div className="mt-7 grid md:grid-cols-3 gap-4">

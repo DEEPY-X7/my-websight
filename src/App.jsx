@@ -10,6 +10,8 @@ const MessageSent = lazy(() => import("./pages/MessageSent"));
 const Research = lazy(() => import("./pages/Research"));
 const BlogDetail = lazy(() => import("./components/Blog/BlogDetail"));
 const PortfolioSlugPage = lazy(() => import("./components/Portfolio/[slug]"));
+const TitanicProject = lazy(() => import("./pages/projects/Titanic"));
+const IrisProject = lazy(() => import("./pages/projects/Iris"));
 const NotFoundPage = lazy(() => import("./NotFound/NotFound"));
 
 import ErrorBoundary from "./error/ErrorBoundary";
@@ -34,6 +36,8 @@ function App() {
         <Route path="/about" element={<RouteElement><About /></RouteElement>} />
         <Route path="/research" element={<RouteElement><Research /></RouteElement>} />
         <Route path="/projects" element={<RouteElement><Portfolio /></RouteElement>} />
+        <Route path="/projects/titanic" element={<RouteElement><TitanicProject /></RouteElement>} />
+        <Route path="/projects/iris" element={<RouteElement><IrisProject /></RouteElement>} />
         <Route path="/projects/:slug" element={<RouteElement><PortfolioSlugPage /></RouteElement>} />
         <Route path="/blog" element={<RouteElement><Blog /></RouteElement>} />
         <Route path="/blog/:slug" element={<RouteElement><BlogDetail /></RouteElement>} />
