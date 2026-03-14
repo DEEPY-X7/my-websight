@@ -1,50 +1,57 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { ArrowRight, Github, Mail, LineChart } from "lucide-react";
 
-const HeroSection = () => {
+const stats = [
+  { label: "ML Projects", value: "5+" },
+  { label: "GitHub Repos", value: "20+" },
+  { label: "Learning Focus", value: "Python + ML" },
+];
+
+export default function HeroSection() {
   return (
-    <section className="w-full min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-16 pt-24 bg-gradient-to-b from-black via-gray-900 to-black text-white">
-      <motion.div
-        className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-xl"
-        animate={{ y: [0, -6, 0, 6, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <img
-          src="https://res.cloudinary.com/dadp7h2k1/image/upload/v1753085575/deepanshu-profile_xd6jzv.jpg"
-          alt="Portrait of Deepanshu Yadav"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
-
-      <motion.div
-        className="max-w-2xl text-center md:text-left space-y-5"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2 }}
-      >
-        <p className="text-blue-300 font-semibold">Machine Learning Engineer · AI Systems Builder</p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-          Building Machine Learning Systems
+    <section id="home" className="section-wrap py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p className="text-sky-300 text-sm mb-3">BCA Student • Machine Learning Learner</p>
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          Building Machine Learning Projects and Exploring Intelligent Systems
         </h1>
-        <p className="text-lg text-gray-300">
-          Hi, I’m Deepanshu. I build machine learning systems and explore how data can create intelligent software.
-          Currently building ML projects such as Titanic Survival Prediction and Iris Classification.
-        </p>
-        <p className="text-sm text-gray-400">
-          BCA student exploring AI, Data Science, and practical machine learning workflows.
+        <p className="text-slate-300 mt-5 max-w-xl">
+          I’m learning machine learning by shipping small projects, writing down lessons, and iterating on real datasets.
+          My focus is Python, data analysis, and predictive modeling workflows.
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-          <a href="https://github.com/DEEPY-X7" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border border-blue-400 text-blue-300 hover:bg-blue-500/20">
-            GitHub
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" className="px-5 py-2.5 rounded-lg bg-sky-500 text-slate-950 text-sm font-semibold hover:bg-sky-400 transition">View Projects</a>
+          <a href="https://github.com/DEEPY-X7" target="_blank" rel="noreferrer" className="px-5 py-2.5 rounded-lg border border-sky-300/30 text-sm inline-flex items-center gap-2 hover:border-sky-300">
+            <Github size={16} /> GitHub
           </a>
-          <a href="/projects" className="px-6 py-3 rounded-full bg-blue-500 text-white hover:bg-blue-600">
-            View Projects
+          <a href="#contact" className="px-5 py-2.5 rounded-lg border border-slate-600 text-sm inline-flex items-center gap-2 hover:border-slate-400">
+            <Mail size={16} /> Contact
           </a>
         </div>
-      </motion.div>
+      </div>
+
+      <div className="surface-card p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold">Learning Dashboard</h2>
+          <LineChart size={18} className="text-cyan-300" />
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-3">
+          {stats.map((s) => (
+            <div key={s.label} className="bg-slate-900 rounded-xl p-4 border border-slate-700/70">
+              <p className="text-xl font-semibold text-sky-300">{s.value}</p>
+              <p className="text-xs text-slate-400 mt-1">{s.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 rounded-xl bg-slate-900 p-4 border border-slate-700/70">
+          <p className="text-xs text-slate-400 mb-2">Current sprint</p>
+          <p className="text-sm text-slate-200">Improving model evaluation understanding: confusion matrix, precision/recall trade-off, and feature importance.</p>
+          <span className="inline-flex items-center gap-1 text-xs text-cyan-300 mt-3">Weekly progress notes <ArrowRight size={14} /></span>
+        </div>
+      </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

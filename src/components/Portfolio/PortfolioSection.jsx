@@ -3,11 +3,11 @@ import ProjectGrid from "./ProjectGrid";
 
 export default function PortfolioSection() {
   return (
-    <section className="bg-gradient-to-b from-black via-gray-900 to-black py-20 px-4 text-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Machine Learning Projects</h2>
-        <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">
-          End-to-end ML project cards with dataset understanding, feature engineering, and measurable model performance.
+    <section className="py-16 px-4 text-white bg-[#0F172A]">
+      <div className="section-wrap">
+        <h1 className="text-4xl font-bold text-center">Machine Learning Projects</h1>
+        <p className="text-center text-slate-400 max-w-2xl mx-auto mt-3 mb-10">
+          Each project includes the problem statement, dataset context, feature engineering decisions, and evaluation notes.
         </p>
         <ProjectGrid />
       </div>
