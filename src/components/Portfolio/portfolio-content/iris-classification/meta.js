@@ -1,0 +1,17 @@
+export default {
+  slug: "iris-classification",
+  title: "Iris Classification",
+  date: "2026-01-08",
+  image: "https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=1200&auto=format&fit=crop",
+  desc: "Classified iris flower species using petal and sepal measurements.",
+  tech: ["Python", "NumPy", "Scikit-learn", "Matplotlib"],
+  results: "Accuracy: 96%",
+  links: { github: "https://github.com/DEEPY-X7" },
+  problemStatement: "Predict flower species among setosa, versicolor, and virginica.",
+  dataset: "Classic Iris dataset with 150 rows and four numeric features.",
+  eda: "Visualized pairwise feature separation and class distributions.",
+  featureEngineering: "Standardized input features and validated class balance.",
+  modelUsed: "K-Nearest Neighbors and Decision Tree comparisons.",
+  evaluationMetrics: "Accuracy, macro F1-score, and confusion matrix.",
+  resultsDetail: "Best model achieved 96% validation accuracy with clear class separation.",
+};

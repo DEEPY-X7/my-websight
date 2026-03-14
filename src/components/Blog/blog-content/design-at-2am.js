@@ -1,11 +1,8 @@
-// 📄 design-at-2am-content.js
-
 const content = [
-  "It’s 2AM. The world is asleep, but I’m wide awake. My fingers move over the keyboard while the rain whispers on the windowpane.",
-  "This is the hour when design speaks to me—not with noise, but with silence.",
-  "There’s no rush, no distractions. Every decision feels poetic: spacing, alignment, typography, motion.",
-  "I don’t design at 2AM because I have to. I design at 2AM because it’s the only time my soul gets to speak clearly.",
-  "Under moonlight, pixels turn to poetry."
+  "The Titanic project starts by understanding null values in Age, Cabin, and Embarked.",
+  "Next we encode categorical columns like Sex and Embarked for model compatibility.",
+  "We train a logistic regression classifier and evaluate with confusion matrix and F1 score.",
+  "Feature importance and error analysis reveal where the model makes wrong predictions.",
 ];
 
 export default content;

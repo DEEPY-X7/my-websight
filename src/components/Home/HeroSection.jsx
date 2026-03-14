@@ -1,69 +1,47 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const [typedText, setTypedText] = useState("");
-  const fullText =
-    "MERN Stack Developer | Soulful Coder | Digital Dream Weaver";
-  const speed = 60;
-
-  useEffect(() => {
-    let i = 0;
-    const typeInterval = setInterval(() => {
-      setTypedText((prev) => prev + fullText[i]);
-      i++;
-      if (i === fullText.length) clearInterval(typeInterval);
-    }, speed);
-    return () => clearInterval(typeInterval);
-  }, []);
-
   return (
-    <section className="w-full min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-16 pt-20 md:pt-24 bg-gradient-to-b from-black via-gray-900 to-black text-white">
-      {/* 👤 Profile Image */}
+    <section className="w-full min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-10 px-4 sm:px-6 md:px-16 pt-24 bg-gradient-to-b from-black via-gray-900 to-black text-white">
       <motion.div
-        className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-700 shadow-xl"
+        className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-xl"
         animate={{ y: [0, -6, 0, 6, 0] }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         <img
           src="https://res.cloudinary.com/dadp7h2k1/image/upload/v1753085575/deepanshu-profile_xd6jzv.jpg"
           alt="Portrait of Deepanshu Yadav"
-          className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
+          className="w-full h-full object-cover"
         />
       </motion.div>
 
-      {/* ✍️ Text Section */}
       <motion.div
-        className="max-w-2xl text-center md:text-left space-y-4 px-2 sm:px-0"
+        className="max-w-2xl text-center md:text-left space-y-5"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-          Hello, I’m <br />
-          <span className="text-gray-300">Deepanshu Yadav</span>
+        <p className="text-blue-300 font-semibold">Machine Learning Engineer · AI Systems Builder</p>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+          Building Machine Learning Systems
         </h1>
-
-        <p className="text-base sm:text-lg md:text-xl text-gray-400">
-          I build web experiences that feel personal.  
-          I don’t just write code — I compose expressions in logic and pixels.
+        <p className="text-lg text-gray-300">
+          Hi, I’m Deepanshu. I build machine learning systems and explore how data can create intelligent software.
+          Currently building ML projects such as Titanic Survival Prediction and Iris Classification.
+        </p>
+        <p className="text-sm text-gray-400">
+          BCA student exploring AI, Data Science, and practical machine learning workflows.
         </p>
 
-        <p className="text-sm sm:text-base md:text-lg font-mono text-gray-500 min-h-[2rem]">
-          {typedText}
-          <span className="animate-blink">|</span>
-        </p>
-
-        <a
-          href="/portfolio"
-          className="inline-block mt-4 px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition duration-300 text-sm sm:text-base"
-        >
-          View My Work
-        </a>
+        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+          <a href="https://github.com/DEEPY-X7" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border border-blue-400 text-blue-300 hover:bg-blue-500/20">
+            GitHub
+          </a>
+          <a href="/projects" className="px-6 py-3 rounded-full bg-blue-500 text-white hover:bg-blue-600">
+            View Projects
+          </a>
+        </div>
       </motion.div>
     </section>
   );

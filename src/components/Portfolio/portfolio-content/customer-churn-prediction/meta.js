@@ -1,0 +1,17 @@
+export default {
+  slug: "customer-churn-prediction",
+  title: "Customer Churn Prediction",
+  date: "2026-01-02",
+  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+  desc: "Predicted customer churn probability for subscription retention planning.",
+  tech: ["Python", "Pandas", "Scikit-learn", "Seaborn"],
+  results: "ROC-AUC: 0.88",
+  links: { github: "https://github.com/DEEPY-X7" },
+  problemStatement: "Identify customers likely to churn in the near term.",
+  dataset: "Telecom customer records with usage, contract, and billing features.",
+  eda: "Analyzed churn by contract type, monthly charges, and tenure.",
+  featureEngineering: "Encoded categories, normalized continuous variables, and balanced class weights.",
+  modelUsed: "XGBoost-inspired gradient boosting alternative and Logistic Regression baseline.",
+  evaluationMetrics: "ROC-AUC, precision-recall curve, confusion matrix.",
+  resultsDetail: "Model achieved 0.88 ROC-AUC and improved churn recall for high-risk segments.",
+};

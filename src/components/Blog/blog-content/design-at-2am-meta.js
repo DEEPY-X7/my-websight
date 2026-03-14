@@ -1,13 +1,11 @@
 import content from "./design-at-2am";
 
 export default {
-  slug: "design-at-2am",
-  title: "Designing at 2AM",
-  image: "https://res.cloudinary.com/dadp7h2k1/image/upload/v1753145231/pexels-rahul-pandit-1933900_wdullw.jpg",
-  date: "July 2025",
-  tags: ["Design", "Creativity", "Night"],
+  slug: "how-titanic-ml-model-works",
+  title: "How Titanic ML Model Works",
+  snippet: "From missing values to classification metrics: an end-to-end Titanic case study.",
+  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+  date: "2026-01-08",
+  tags: ["titanic", "eda", "classification"],
   content,
 };
-
-
-
