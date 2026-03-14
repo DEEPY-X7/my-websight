@@ -4,11 +4,11 @@ import FooterCTA from "../components/Home/FooterCTA";
 import PortfolioSection from "../components/Portfolio/PortfolioSection";
 import ErrorBoundary from "../error/ErrorBoundary";
 
-function Portfolio() {
+export default function Portfolio() {
   return (
-    <>
+    <div className="bg-[#0F172A] text-slate-100 min-h-screen">
       <ErrorBoundary><Navbar /></ErrorBoundary>
-      <main className="min-h-screen bg-black text-white">
+      <main>
         <ErrorBoundary>
           <Suspense fallback={<div className="text-center py-20">Loading ML projects...</div>}>
             <PortfolioSection />
@@ -16,8 +16,6 @@ function Portfolio() {
         </ErrorBoundary>
       </main>
       <ErrorBoundary><FooterCTA /></ErrorBoundary>
-    </>
+    </div>
   );
 }
-
-export default Portfolio;

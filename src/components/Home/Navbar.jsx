@@ -1,68 +1,69 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { Github, Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Home", path: "/" },
   { label: "Projects", path: "/projects" },
-  { label: "Research", path: "/research" },
+  { label: "Experiments", path: "/research" },
   { label: "Blog", path: "/blog" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
 
-const Navbar = () => {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <motion.nav
-      initial={{ y: -40, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-black/70 border-b border-blue-400/20"
-    >
-      <div className="max-w-6xl mx-auto px-4 py-5 flex items-center justify-between">
-        <div className="text-2xl md:text-3xl font-bold tracking-wider text-white">
-          Deepanshu<span className="text-blue-400">.AI</span>
-        </div>
+  const navLinkClass = ({ isActive }) =>
+    `text-sm font-medium transition-colors ${isActive ? "text-sky-300" : "text-slate-300 hover:text-slate-100"}`;
 
-        <div className="hidden md:flex gap-8 text-base text-gray-300 font-semibold">
-          {NAV_ITEMS.map(({ label, path }) => (
-            <NavLink
-              key={label}
-              to={path}
-              className={({ isActive }) =>
-                `hover:text-white transition ${isActive ? "text-blue-300" : ""}`
-              }
-            >
-              {label}
+  return (
+    <nav className="sticky top-0 z-50 border-b border-sky-300/10 bg-[#0f172a]/90 backdrop-blur">
+      <div className="section-wrap py-4 flex items-center justify-between">
+        <NavLink to="/" className="text-lg font-bold tracking-tight">
+          Deepanshu<span className="text-sky-400">.ml</span>
+        </NavLink>
+
+        <div className="hidden md:flex items-center gap-7">
+          {NAV_ITEMS.map((item) => (
+            <NavLink key={item.label} to={item.path} className={navLinkClass}>
+              {item.label}
             </NavLink>
           ))}
+          <a
+            href="https://github.com/DEEPY-X7"
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-300 hover:text-sky-300 transition-colors"
+            aria-label="Open GitHub profile"
+          >
+            <Github size={18} />
+          </a>
         </div>
 
-        <div className="md:hidden text-white text-2xl">
-          {menuOpen ? <HiX onClick={() => setMenuOpen(false)} /> : <HiMenuAlt3 onClick={() => setMenuOpen(true)} />}
-        </div>
+        <button
+          className="md:hidden text-slate-200"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
 
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col gap-3 bg-black/95 border-t border-blue-400/20">
-          {NAV_ITEMS.map(({ label, path }) => (
+        <div className="md:hidden section-wrap pb-4 flex flex-col gap-3">
+          {NAV_ITEMS.map((item) => (
             <NavLink
-              key={label}
-              to={path}
+              key={item.label}
+              to={item.path}
+              className={navLinkClass}
               onClick={() => setMenuOpen(false)}
-              className={({ isActive }) =>
-                `block py-2 px-3 rounded ${isActive ? "text-blue-300" : "text-gray-300"}`
-              }
             >
-              {label}
+              {item.label}
             </NavLink>
           ))}
         </div>
       )}
-    </motion.nav>
+    </nav>
   );
-};
-
-export default Navbar;
+}
