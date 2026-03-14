@@ -1,0 +1,17 @@
+export default {
+  slug: "house-price-prediction",
+  title: "House Price Prediction",
+  date: "2026-01-06",
+  image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop",
+  desc: "Predicted house prices using regression models and engineered numerical features.",
+  tech: ["Python", "Pandas", "Scikit-learn", "Jupyter"],
+  results: "R² Score: 0.89",
+  links: { github: "https://github.com/DEEPY-X7" },
+  problemStatement: "Estimate housing sale price from property attributes.",
+  dataset: "Structured housing dataset with area, rooms, quality, and location features.",
+  eda: "Analyzed outliers, skewness, and feature correlation with target price.",
+  featureEngineering: "Applied log transformation and one-hot encoding for categorical columns.",
+  modelUsed: "Linear Regression and Random Forest Regressor.",
+  evaluationMetrics: "MAE, RMSE, and R² score.",
+  resultsDetail: "Random Forest reached R² 0.89 and reduced RMSE compared to linear baseline.",
+};

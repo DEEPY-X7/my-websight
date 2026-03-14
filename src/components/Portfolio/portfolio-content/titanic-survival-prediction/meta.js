@@ -1,0 +1,17 @@
+export default {
+  slug: "titanic-survival-prediction",
+  title: "Titanic Survival Prediction",
+  date: "2026-01-10",
+  image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+  desc: "Built a classification model to predict passenger survival using demographic and ticket features.",
+  tech: ["Python", "Pandas", "Scikit-learn", "Seaborn"],
+  results: "Accuracy: 82%",
+  links: { github: "https://github.com/DEEPY-X7" },
+  problemStatement: "Predict whether a passenger survived based on available attributes.",
+  dataset: "Kaggle Titanic dataset with passenger class, age, sex, fare, and embarkation data.",
+  eda: "Checked null values, class imbalance, and survival trends by sex and class with visual plots.",
+  featureEngineering: "Handled missing age values, encoded categories, and scaled numeric fields.",
+  modelUsed: "Logistic Regression with train-test split and baseline comparison.",
+  evaluationMetrics: "Accuracy, precision, recall, F1-score, and confusion matrix.",
+  resultsDetail: "Model achieved 82% accuracy with strong precision-recall tradeoff on validation split.",
+};

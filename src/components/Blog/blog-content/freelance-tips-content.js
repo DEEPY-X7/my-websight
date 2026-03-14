@@ -1,10 +1,8 @@
-const freelanceTipsContent = [
-  "Tip 1: Value yourself.",
-  "Tip 2: Sign contracts before working.",
-  "Tip 3: Track your time and rate.",
-  "Tip 4: Build relationships, not just clients.",
-  "Tip 5: Rest is part of work."
+const content = [
+  "Logistic regression is one of the strongest baseline models for binary classification problems.",
+  "Instead of directly predicting classes, it predicts probability using the sigmoid function.",
+  "We then choose a threshold (usually 0.5) to convert probability to a label.",
+  "In projects like Titanic survival prediction, it performs well with clean features and balanced preprocessing.",
 ];
 
-export default freelanceTipsContent;
-
+export default content;
