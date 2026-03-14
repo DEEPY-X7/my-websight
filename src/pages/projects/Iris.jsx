@@ -4,33 +4,35 @@ import Navbar from "../../components/Home/Navbar";
 const sections = [
   {
     title: "Problem Statement",
-    text: "Classify iris flowers into setosa, versicolor, and virginica classes using sepal and petal measurements.",
+    text: "Classify iris flowers into setosa, versicolor, and virginica classes using flower measurements.",
   },
   {
-    title: "Dataset Explanation",
-    text: "Classic Iris dataset containing 150 samples with four numerical features and one target class label.",
+    title: "Dataset Overview",
+    text: "Used the Iris dataset containing 150 samples, four numeric features, and one target class.",
   },
   {
     title: "EDA Insights",
-    text: "Petal features separate classes better than sepal features, making them highly informative for classification.",
+    text: "Petal length and petal width showed stronger separation between classes than sepal features.",
   },
   {
     title: "Feature Engineering",
-    text: "Scaled numeric features and verified class balance before training and validation.",
+    text: "Standardized numeric inputs and validated class balance before train-test split.",
   },
   {
     title: "Model Used",
-    text: "Logistic Regression as a simple and interpretable baseline model for multi-class classification.",
+    text: "Logistic Regression as an interpretable baseline for multi-class classification.",
   },
   {
     title: "Evaluation Metrics",
-    text: "Accuracy score, precision/recall, and confusion matrix across all three classes.",
+    text: "Tracked accuracy, precision, recall, and confusion matrix across all classes.",
   },
   {
     title: "Conclusion",
-    text: "This project strengthened my understanding of multi-class ML pipelines and model evaluation.",
+    text: "This project improved my understanding of multi-class pipelines and baseline model evaluation.",
   },
 ];
+
+const charts = ["Confusion Matrix", "Feature Importance", "Data Distribution"];
 
 export default function Iris() {
   return (
@@ -45,12 +47,23 @@ export default function Iris() {
             <section key={item.title} className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-6">
               <h2 className="text-2xl font-semibold text-slate-100">{item.title}</h2>
               <p className="text-slate-300 mt-3">{item.text}</p>
-              <div className="mt-5 h-36 rounded-xl border border-dashed border-slate-600 bg-slate-900/60 flex items-center justify-center text-xs text-slate-500">
-                Placeholder chart
-              </div>
             </section>
           ))}
         </div>
+
+        <section className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-6 mt-5">
+          <h2 className="text-2xl font-semibold text-slate-100">Visual Placeholders</h2>
+          <div className="mt-5 grid md:grid-cols-3 gap-4">
+            {charts.map((chart) => (
+              <div
+                key={chart}
+                className="h-36 rounded-xl border border-dashed border-slate-600 bg-slate-900/60 flex items-center justify-center text-xs text-slate-400"
+              >
+                {chart}
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );

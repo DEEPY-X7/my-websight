@@ -1,10 +1,14 @@
 import React from "react";
-import { ArrowUpRight, BrainCircuit, Github, Mail } from "lucide-react";
+import { Download, Github, Network, Sparkles } from "lucide-react";
 
-const highlights = [
-  "Feature engineering practice",
-  "Model evaluation with clear metrics",
-  "Learning logs from every experiment",
+const neuralPoints = [
+  "left-8 top-10",
+  "left-24 top-20",
+  "left-14 top-36",
+  "right-20 top-14",
+  "right-10 top-32",
+  "right-28 bottom-16",
+  "left-24 bottom-12",
 ];
 
 export default function HeroSection() {
@@ -43,30 +47,36 @@ export default function HeroSection() {
             <Github size={16} /> GitHub
           </a>
           <a
-            href="#contact"
+            href="/resume.pdf"
             className="px-5 py-3 rounded-xl border border-slate-600 text-sm inline-flex items-center gap-2 hover:border-sky-400 hover:text-sky-300 transition"
           >
-            <Mail size={16} /> Contact
+            <Download size={16} /> Download Resume
           </a>
         </div>
       </div>
 
-      <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-6 md:p-7">
+      <div className="relative bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-6 md:p-7 min-h-80 overflow-hidden">
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-lg font-semibold text-slate-100">Current ML Focus</h2>
-          <BrainCircuit size={20} className="text-sky-400" />
+          <h2 className="text-lg font-semibold text-slate-100">Neural Network Visual</h2>
+          <Sparkles size={20} className="text-sky-400" />
         </div>
 
-        <div className="space-y-3">
-          {highlights.map((item) => (
-            <div
-              key={item}
-              className="bg-slate-900/70 border border-slate-700 rounded-xl p-4 flex items-center justify-between"
-            >
-              <p className="text-sm text-slate-200">{item}</p>
-              <ArrowUpRight size={15} className="text-cyan-300" />
-            </div>
+        <div className="relative h-64 rounded-xl bg-slate-900/80 border border-slate-700">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 220" fill="none" aria-hidden="true">
+            <path d="M56 50L154 84L268 60L346 120" stroke="#22D3EE" strokeOpacity="0.4" />
+            <path d="M56 50L148 154L260 158L340 104" stroke="#38BDF8" strokeOpacity="0.4" />
+            <path d="M56 148L154 84L260 158L346 120" stroke="#38BDF8" strokeOpacity="0.3" />
+          </svg>
+          {neuralPoints.map((point) => (
+            <span
+              key={point}
+              className={`absolute ${point} w-3 h-3 rounded-full bg-sky-400 shadow-[0_0_20px_rgba(56,189,248,0.6)]`}
+            />
           ))}
+          <div className="absolute left-4 bottom-4 text-xs text-slate-400 inline-flex items-center gap-2">
+            <Network size={14} className="text-cyan-300" />
+            Abstract ML graph placeholder
+          </div>
         </div>
       </div>
     </section>

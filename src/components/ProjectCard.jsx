@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Target, Database, FlaskConical, Wrench } from "lucide-react";
+import { Database, FlaskConical, Gauge, Target, Wrench } from "lucide-react";
 
 export default function ProjectCard({ project }) {
   return (
-    <article className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-5 md:p-6 hover:shadow-xl hover:shadow-sky-500/10 transition">
+    <article className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-5 md:p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10 transition duration-300">
       <h3 className="text-xl font-semibold text-slate-100">{project.title}</h3>
       <p className="text-sm text-slate-300 mt-2">{project.description}</p>
 
@@ -28,9 +28,15 @@ export default function ProjectCard({ project }) {
           </span>
         </p>
         <p className="flex items-start gap-2">
+          <Gauge size={15} className="text-sky-400 mt-0.5" />
+          <span>
+            <span className="text-slate-100">Metric:</span> {project.metric}
+          </span>
+        </p>
+        <p className="flex items-start gap-2">
           <Wrench size={15} className="text-sky-400 mt-0.5" />
           <span>
-            <span className="text-slate-100">Tools:</span> {project.tools.join(", ")}
+            <span className="text-slate-100">Tools:</span> {project.tools.join(" • ")}
           </span>
         </p>
       </div>
