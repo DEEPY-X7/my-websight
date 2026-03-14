@@ -4,33 +4,35 @@ import Navbar from "../../components/Home/Navbar";
 const sections = [
   {
     title: "Problem Statement",
-    text: "Predict whether a passenger survived the Titanic disaster using demographic and ticket-related features.",
+    text: "Predict whether a passenger survived the Titanic disaster using available passenger attributes.",
   },
   {
-    title: "Dataset Explanation",
-    text: "Kaggle Titanic dataset with columns such as age, gender, passenger class, fare, embarked port, and survival label.",
+    title: "Dataset Overview",
+    text: "Used the Kaggle Titanic dataset with passenger demographics, ticket details, and survival labels.",
   },
   {
     title: "EDA Insights",
-    text: "Survival rates were higher for female passengers and for higher ticket classes. Missing values required careful handling.",
+    text: "Passenger class, fare band, and gender showed noticeable patterns related to survival probability.",
   },
   {
     title: "Feature Engineering",
-    text: "Encoded categorical fields, handled missing values, and created model-ready numerical features.",
+    text: "Handled missing values, encoded categorical columns, and scaled selected numeric inputs.",
   },
   {
     title: "Model Used",
-    text: "Logistic Regression baseline with train-test split and standardized preprocessing pipeline.",
+    text: "Logistic Regression was chosen as an interpretable baseline for binary classification.",
   },
   {
     title: "Evaluation Metrics",
-    text: "Accuracy, precision, recall, and confusion matrix were used to understand model performance.",
+    text: "Measured performance using accuracy, precision, recall, and confusion matrix analysis.",
   },
   {
     title: "Conclusion",
-    text: "This project helped me learn end-to-end ML workflow from data cleaning to model interpretation.",
+    text: "This project helped me understand end-to-end binary classification workflow and model validation.",
   },
 ];
+
+const charts = ["Confusion Matrix", "Feature Importance", "Data Distribution"];
 
 export default function Titanic() {
   return (
@@ -45,12 +47,23 @@ export default function Titanic() {
             <section key={item.title} className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-6">
               <h2 className="text-2xl font-semibold text-slate-100">{item.title}</h2>
               <p className="text-slate-300 mt-3">{item.text}</p>
-              <div className="mt-5 h-36 rounded-xl border border-dashed border-slate-600 bg-slate-900/60 flex items-center justify-center text-xs text-slate-500">
-                Placeholder chart
-              </div>
             </section>
           ))}
         </div>
+
+        <section className="bg-slate-800 border border-slate-700 rounded-xl shadow-lg p-6 mt-5">
+          <h2 className="text-2xl font-semibold text-slate-100">Visual Placeholders</h2>
+          <div className="mt-5 grid md:grid-cols-3 gap-4">
+            {charts.map((chart) => (
+              <div
+                key={chart}
+                className="h-36 rounded-xl border border-dashed border-slate-600 bg-slate-900/60 flex items-center justify-center text-xs text-slate-400"
+              >
+                {chart}
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );

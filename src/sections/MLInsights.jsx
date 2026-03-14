@@ -13,7 +13,7 @@ const insightCards = [
     desc: "Visual summary of correct and incorrect classification predictions.",
   },
   {
-    title: "Data Distribution",
+    title: "Dataset Visualization",
     icon: ChartColumnBig,
     desc: "Compares spread and balance of important variables in the dataset.",
   },

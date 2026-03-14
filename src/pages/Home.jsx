@@ -3,8 +3,7 @@ import Navbar from "../components/Home/Navbar";
 import HeroSection from "../components/Home/HeroSection";
 import ProjectOverviewSection from "../components/Home/ProjectOverviewSection";
 import MLInsights from "../sections/MLInsights";
-import SkillsSection from "../components/Home/SkillsSection";
-import WhyML from "../sections/WhyML";
+import Skills from "../sections/Skills";
 import LearningJourney from "../sections/LearningJourney";
 import GitHubProjects from "../sections/GitHubProjects";
 import BlogSectionHome from "../components/Home/BlogSectionHome";
@@ -19,8 +18,7 @@ export default function Home() {
       <HeroSection />
       <ProjectOverviewSection />
       <MLInsights />
-      <SkillsSection />
-      <WhyML />
+      <Skills />
       <LearningJourney />
       <GitHubProjects />
       <BlogSectionHome />
