@@ -1,1 +1,1 @@
-Global styles are managed in `app/globals.css` for Next.js App Router.
+Global styles are managed in `styles/globals.css` and imported in `app/layout.jsx`.
