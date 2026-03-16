@@ -1,40 +1,34 @@
-# Deepanshu Yadav — Machine Learning Portfolio
+# AI Learning Platform (Next.js)
 
-This repository contains a React + Vite + Tailwind portfolio website tailored for Machine Learning Internship applications.
+This repository is refactored from a React + Vite portfolio into a **Next.js App Router AI/ML education platform**.
 
-## Positioning
-- Machine Learning Engineer
-- AI Systems Builder
-- BCA student exploring AI, Data Science, and Machine Learning
+## Learning Focus
 
-## Featured ML Projects
-- Titanic Survival Prediction
-- Iris Classification
-- House Price Prediction
-- Spam Email Classifier
-- Customer Churn Prediction
+Structured path:
 
-Each project page includes:
-- Problem statement
-- Dataset description
-- EDA summary
-- Feature engineering
-- Model used
-- Evaluation metrics
-- Results
+**Python → Mathematics → Machine Learning → Deep Learning → AI Systems**
 
-## ML Tech Stack Emphasis
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+## Routes
+
+- `/` Home
+- `/start-here`
+- `/roadmap`
+- `/lessons`
+- `/projects`
+- `/notes`
+- `/about`
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- Tailwind CSS v4
 
 ## Development
+
 ```bash
 npm install
 npm run dev
 npm run build
+npm run start
 ```
