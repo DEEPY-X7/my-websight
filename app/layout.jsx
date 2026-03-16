@@ -1,5 +1,6 @@
-import './globals.css';
+import '@/styles/globals.css';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   metadataBase: new URL('https://my-websight.vercel.app'),
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

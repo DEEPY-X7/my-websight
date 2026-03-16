@@ -10,18 +10,18 @@ export default function HomePage() {
       <HeroSection />
       <section className="section-wrap py-16">
         <SectionHeader
-          title="Structured AI Learning"
-          description="A complete learning journey from Python foundations to practical AI systems."
+          title="AI Learning Roadmap"
+          description="A structured learning system from Python foundations to practical AI systems engineering."
         />
         <RoadmapDiagram />
       </section>
       <section className="section-wrap py-16">
         <SectionHeader
-          title="Project-Based Understanding"
-          description="Learn by building practical machine learning projects with datasets, models, and measurable outcomes."
+          title="Build with Projects"
+          description="Practice concepts through focused machine learning projects with clean problem-to-results breakdowns."
         />
         <div className="grid md:grid-cols-2 gap-4">
-          {projects.slice(0, 2).map((project) => <ProjectCard key={project.slug} project={project} />)}
+          {projects.slice(0, 4).map((project) => <ProjectCard key={project.slug} project={project} />)}
         </div>
       </section>
     </>
